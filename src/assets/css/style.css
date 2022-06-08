@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+}
+
+a {
+    color: #9C9C9C;
+    text-decoration: none;
+}
+
+a:visited {
+    color: #9C9C9C;
+}
