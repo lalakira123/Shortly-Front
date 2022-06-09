@@ -20,7 +20,7 @@ function SignIn(){
         promise.then((response) => {
             const { data } = response;
             setUser(data);
-            navigate('/signin');
+            navigate('/user');
             setLoading(false);
         })
         promise.catch((e) => {
@@ -35,7 +35,7 @@ function SignIn(){
                 placeholder='E-mail'
                 onChange={(e) => setSignIn({...signIn, email: e.target.value})}
                 value={signIn.email}
-                type='text'
+                type='email'
                 required
                 disabled={loading}
                 />
@@ -43,7 +43,7 @@ function SignIn(){
                 placeholder='Senha'
                 onChange={(e) => setSignIn({...signIn, password: e.target.value})}
                 value={signIn.password}
-                type='text'
+                type='password'
                 required
                 disabled={loading}
                 />

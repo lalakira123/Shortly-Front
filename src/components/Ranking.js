@@ -1,15 +1,18 @@
 import axios from 'axios';
 import styled from 'styled-components';
-import { useEffect, useState } from 'react';
+import { useEffect, useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
+
+import UserContext from './../contexts/UserContext';
 
 import Throphy from './../assets/images/ranking.png';
 
 function Ranking() {
+    const { user } = useContext(UserContext);
     const [ board, setBoard ] = useState([]);
 
     useEffect(() => {
-        const promise = axios.get('https://shortly-lalakira123.herokuapp.com/users/ranking');
+        const promise = axios.get('https://shortly-lalakira123.herokuapp.com/ranking');
         promise.then(response => {
             const { data } = response;
             setBoard(data);
@@ -34,9 +37,14 @@ function Ranking() {
                 })}
             </Scores>
             <CreateUser>
-                <Link to='/signup'>
-                    <h3>Crie sua conta para usar nosso serviço!</h3>
-                </Link>
+                {
+                    !user.token? 
+                        <Link to='/signup'>
+                            <h3>Crie sua conta para usar nosso serviço!</h3>
+                        </Link>
+                        : 
+                        ""
+                }
             </CreateUser>
         </>
     );
@@ -68,6 +76,7 @@ const Scores = styled.main`
     border-radius: 24px 24px 0px 0px;
     box-shadow: 0px 4px 24px 0px #78B1591F;
     height: 241px;
+    overflow-y: scroll;
     p{
         font-size: 22px;
         font-weight: 400;

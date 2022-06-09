@@ -39,7 +39,7 @@ function SignUp(){
                 placeholder='E-mail'
                 onChange={(e) => setSignUp({...signUp, email: e.target.value})}
                 value={signUp.email}
-                type='text'
+                type='email'
                 required
                 disabled={loading}
                 />
@@ -47,7 +47,7 @@ function SignUp(){
                 placeholder='Senha'
                 onChange={(e) => setSignUp({...signUp, password: e.target.value})}
                 value={signUp.password}
-                type='text'
+                type='password'
                 required
                 disabled={loading}
                 />
@@ -55,7 +55,7 @@ function SignUp(){
                 placeholder='Confirmar senha'
                 onChange={(e) => setSignUp({...signUp, confirmPassword: e.target.value})}
                 value={signUp.confirmPassword}
-                type='text'
+                type='password'
                 required
                 disabled={loading}
                 />
