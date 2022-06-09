@@ -68,9 +68,8 @@ const Title = styled.section`
 const Scores = styled.main`
     display: flex;
     flex-direction: column;
-    margin-top: 57px;
-    margin-right: 211px;
-    margin-left: 211px;
+    margin: 57px auto 0px auto;
+    width: 75%;
     padding: 19px 40px;
     border: 1px solid rgba(120, 177, 89, 0.25);
     border-radius: 24px 24px 0px 0px;

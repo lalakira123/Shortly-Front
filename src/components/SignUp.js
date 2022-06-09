@@ -81,6 +81,9 @@ const Forms = styled.form`
         box-shadow: 0px 4px 24px 0px rgba(120, 177, 89, 0.12);
         font-size: 14px;
         padding: 21px;
+        color: #9C9C9C;
+        font-weight: 400;
+        font-family: 'Lexend Deca', sans-serif;
         &::placeholder {
             color: #9C9C9C;
             font-weight: 400;
