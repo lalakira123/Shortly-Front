@@ -18,7 +18,9 @@ function Header(){
                 </div>
             </NavBar>
             <Title>
-                <h1>Shortly</h1>
+                <Link to='/'>
+                    <h1>Shortly</h1>
+                </Link>
                 <img src={Logo} alt='shorts'/>
             </Title>
         </>
@@ -54,5 +56,6 @@ const Title = styled.div`
     h1{
         font-size: 64px;
         font-weight: 200;
+        color: #000000;
     }
 `
